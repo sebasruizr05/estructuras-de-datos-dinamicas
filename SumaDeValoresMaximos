@@ -2,7 +2,7 @@ import sys
 
 
 def MaximumValues():
-    max = sys.float_info.max # El sys.float_info.max representar el valor mas grande que se puede representar como float en python
+    max = sys.float_info.max # El sys.float_info.max se usa para representar el valor mas grande que se puede representar como float en python
     result = max+max
     return result
 

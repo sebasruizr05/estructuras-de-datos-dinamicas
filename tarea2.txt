@@ -1,0 +1,28 @@
+def sumar_matrices(matriz1, matriz2):
+    def suma_recursiva(matriz1, matriz2, fila, columna):
+        if fila == len(matriz1):
+            return []
+        elif columna == len(matriz1[0]):
+            return suma_recursiva(matriz1, matriz2, fila + 1, 0)
+        else:
+            suma_elemento = matriz1[fila][columna] + matriz2[fila][columna]
+            return [suma_elemento] + suma_recursiva(matriz1, matriz2, fila, columna + 1)
+
+    resultado = [suma_recursiva(matriz1, matriz2, i, 0) for i in range(len(matriz1))]
+    return resultado
+
+matriz1 = [
+    [5, 5, 5],
+    [4, 5, 5],
+    [5, 6, 9]
+]
+
+matriz2 = [
+    [2, 4, 7],
+    [6, 5, 5],
+    [3, 2, 8]
+]
+
+resultado = sumar_matrices(matriz1, matriz2)
+for fila in resultado:
+    print(fila)

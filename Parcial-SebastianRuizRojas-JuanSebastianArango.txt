@@ -1,0 +1,46 @@
+Ejercicio #1 
+Int numeros_binarios(int n):
+	int generar_binarios(int n, string actual, int suma_izquiera, int suma_derecha):
+		if n == 0:
+			if suma_izquierda == suma_derecha:
+				print(actual)
+			end if
+			return
+		end if
+		
+		generar_binarios(n - 1, actual + “0”, suma_izquierda, suma_derecha)
+
+		if n%2 == 1:
+			generar_binarios(n - 1, actual + “1”, suma_izquierda, suma_derecha + 1)
+		end if
+		else:
+			generar_binarios(n -1, actual + “1”, suma_izquierda + 1, suma_derecha)
+		end else
+	generar_binarios(n, “”, 0, 0) 
+
+
+Ejercicio #2 
+Int combinaciones(arr = [], int r, actual = [], int i = 0):
+	n = length.arr
+	if length.actual == r:
+		print(actual)
+		return
+	end if
+	if i == n:
+		return 
+	end if
+	combinaciones(arr, r, actual + [arr[actual]], i + 1)
+	combinaciones(arr, r, actual, i + 1)	
+
+Ejercicio #3
+Int recorrer_matriz(matriz, int fila = 0, int columna = 0):
+	if fila == length.matriz:
+		return 
+	end if
+	print(matriz[fila][columna])
+	if columna + 1< length.matriz[fila]:
+		recorrer_matriz(matriz, fila, columna +1)
+	end if
+	else:
+		recorrer_matriz(matriz, fila + 1, 0)
+	end else

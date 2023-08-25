@@ -1,0 +1,78 @@
+Ejercicios para el parcial
+
+1.Cree una funcion recursiva que reciba un entero y retorne cuantos digitos de este numero son multiplos de dos y de cuatro, ignore el 0
+2.Cree una funcion no recursiva que invierta solo la mitad de un string, la segunda mitad       
+3.Cree una funcion recursiva que calcule la sumatoria de todos los numeros impares de de una matriz cuadrada
+4.Cree una funcion recursiva que reciba una lista, un elemento y un indice y retorne si el elemento esta en la lista y en la posicion dada
+5.Cree una funcion recursiva que reciba un string alfanumerico y que extraiga los digitos del string y retorne el numero formado por todos los digitos
+
+
+Ejercicio #1
+Int mult_2_4 (int num, int cont = 0):
+	if num == 0:
+		return cont
+	end if
+	x = num//10
+	if x%4 == 0 and x%2 == 0:
+		cont += 1
+		num = num
+	end if
+	mult_2_4(num, cont)
+
+Ejercicio #2
+String invert_string(string word):
+	mid = length(word)//2
+	first = word[:mitad]
+	second = word[mitad:]
+	invert = second[::-1]
+
+	return first+invert
+
+Ejercicio #3
+Int sum_matriz(matriz, int i = o, int j = 0, int sum = 0):
+	if i < length(matriz):
+		return sum
+	end if
+	if matriz[i][j]%2 == :
+		sum += matriz[i][j]
+	end if
+	if j < length(matriz):
+		sum_matriz(matriz, i, j+1, sum)
+	end if
+	else:
+		sum_matriz(matriz, i+1, j, sum)
+	end else
+
+Ejercicio #4
+Bool position_list(List, int element, int pos, int i = 0)
+	if List.length == 0:
+		return False	
+	end if 
+	if 0 <= pos < list.length:
+		if list[i] = element
+			return True
+		end if
+		else:
+			position_list(list, element, pos, i + 1)
+	end if
+	else: 
+		return False
+	end else
+
+Ejercicio #5
+String return_num(string cadena, int índex = 0, string resultado = ""):
+	if índex = length(cadena):
+		x = resultado
+		return x
+	end if
+	if cadena[index].isdigit():
+		resultado += alfanumero[index]
+	end if 
+	else:
+		x = return_num(string alfanumero, index + 1, string resultado) 
+	end else
+
+
+
+Sebastian Ruiz Rojas
+

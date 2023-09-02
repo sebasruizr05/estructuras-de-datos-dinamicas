@@ -1,0 +1,18 @@
+Nodo agregando (Nodo lista, Nodo ingreso, Nodo anterior):
+	if (lista == null):
+		return ingreso
+	end if
+	if (ingreso.valor < lista.valor):
+		ingreso.siguiente = lista
+		return ingreso
+	end if
+	if (ingreso.valor == lista.valor):
+		return lista
+	end if 
+	anterior = lista
+	if (ingreso.valor > anterior.valor && ingreso.valor < lista.siguiente):	
+		anterior.siguiente = ingreso
+		ingreso.siguiente = lista
+		return ingreso
+	end if
+end function		
